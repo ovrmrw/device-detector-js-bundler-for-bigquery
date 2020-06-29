@@ -23,7 +23,7 @@ Put `.dist/device-detector-js_{version}.js` to your GCS bucket, then use it in q
 Example:
 
 ```sql
-CREATE TEMP FUNCTION parseUserAgent(ua STRING)
+CREATE TEMP FUNCTION parseUserAgent(userAgent STRING)
   RETURNS
     STRUCT<
       device STRUCT<
@@ -51,7 +51,7 @@ CREATE TEMP FUNCTION parseUserAgent(ua STRING)
   )
   AS
 """
-  var obj = deviceDetector.parse(ua);
+  var obj = deviceDetector.parse(userAgent);
   obj.is_bot = !!obj.bot;
   return obj;
 """;
