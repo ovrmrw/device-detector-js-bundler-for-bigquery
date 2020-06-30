@@ -16,7 +16,7 @@ $ npm run build
 
 ## Deploy
 
-Put `.dist/device-detector-js_{version}.js` to your GCS bucket, then use it in queries for BigQuery.
+Put `dist/device-detector-js_{version}.js` to your GCS bucket, then use it in queries for BigQuery.
 
 ## Use
 
